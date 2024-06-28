@@ -32,8 +32,8 @@ export default function TvDetails ()
               </h1>
               <p>{ trendingTvshows?.tagline }</p>
               <ul className="list-unstyled d-flex">
-                { trendingTvshows?.tv?.map( ( tv,idx ) => (
-                  <div key={idx} className="bg-info p-3 mx-2 rounded-2">{ tv.name }</div>
+                { trendingTvshows?.genres?.map( ( genre,idx ) => (
+                  <div key={idx} className="bg-info p-3 mx-2 rounded-2">{ genre.name }</div>
                 ) ) }
               </ul>
               <p>vote : { trendingTvshows?.vote_average }</p>
