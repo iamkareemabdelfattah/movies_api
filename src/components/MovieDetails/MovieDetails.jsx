@@ -29,12 +29,12 @@ export default function MovieDetails ()
           <div className="col-md-9">
             <div className="item">
               <h1>
-                { trendingMovies?.title } { trendingMovies?.name }
+                { trendingMovies.title } { trendingMovies.name }
               </h1>
               <p>{ trendingMovies?.tagline }</p>
               <ul className="list-unstyled d-flex">
-                { trendingMovies?.genres?.map( ( genre ) => (
-                  <div className="bg-info p-3 mx-2 rounded-2">{ genre.name }</div>
+                { trendingMovies?.genres?.map( ( genre,idx ) => (
+                  <div key={idx} className="bg-info p-3 mx-2 rounded-2">{ genre.name }</div>
                 ) ) }
               </ul>
               <p>vote : { trendingMovies?.vote_average }</p>
